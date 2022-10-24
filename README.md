@@ -1,15 +1,12 @@
 # relax
 
-### Примеры REST-запросов и ответы: 
-+ Пример №1
-![img.png](src/main/resources/img/img.png)
-+ Пример №2
-![img.png](src/main/resources/img/img1.png)
-+ Пример №3
-![img.png](src/main/resources/img/img2.png)
-+ Пример №4
-![img.png](src/main/resources/img/img3.png)
-+ Пример №5
-![img.png](src/main/resources/img/img4.png)
-+ Пример №6
-![img.png](src/main/resources/img/img5.png)
+### Все найденные числа/последовательности из тестового файла 10m.txt
+
++ **max_value** = 49999978
++ **min_value** = -49999996
++ **median_value** = 25216
++ **avg_value** = 7364.418442641844
++ **asc_sequence** = -48190694, -47725447, -43038241, -20190291, -17190728, -6172572, 8475960, 25205909, 48332507, 48676185
++ **desc_sequence** = 47689379, 42381213, 30043880, 12102356, -4774057, -5157723, -11217378, -23005285, -23016933, -39209115, -49148762
+
+
