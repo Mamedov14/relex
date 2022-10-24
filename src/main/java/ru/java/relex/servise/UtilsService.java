@@ -49,10 +49,52 @@ public class UtilsService {
 
 
     public List<List<Long>> getAsc(String path) {
-        return null;
+        List<Long> file = getReadFile(path);
+
+        long[] res = new long[file.size()];
+        List<List<Long>> lists = new ArrayList<>();
+        Arrays.fill(res, 1);
+        long max = 0;
+
+        for (int i = 1; i < res.length; i++) {
+            if (file.get(i) > file.get(i - 1)) {
+                long peak = res[i - 1] + 1;
+                res[i] = peak;
+                max = peak;
+            }
+        }
+
+        for (int i = 0; i < res.length; i++) {
+            if (max == res[i]) {
+                lists.add(file.subList((int) (i - max + 1), i + 1));
+            }
+        }
+
+        return lists;
     }
 
     public List<List<Long>> getDesc(String path) {
-        return null;
+        List<Long> file = getReadFile(path);
+
+        long[] res = new long[file.size()];
+        List<List<Long>> lists = new ArrayList<>();
+        Arrays.fill(res, -1);
+        long min = 0;
+
+        for (int i = 1; i < res.length; i++) {
+            if (file.get(i) < file.get(i - 1)) {
+                long peak = res[i - 1] - 1;
+                res[i] = peak;
+                min = peak;
+            }
+        }
+
+        for (int i = 0; i < res.length; i++) {
+            if (min == res[i]) {
+                lists.add(file.subList((int) (i + min + 1), i + 1));
+            }
+        }
+
+        return lists;
     }
 }
