@@ -61,21 +61,4 @@ public class Controller {
         }
         return new Response("no such operation", null);
     }
-
-/*
-    @GetMapping(value = {"/get_min_value"}, produces = {"application/json", "application/xml"})
-    public Response getMin(@RequestBody Request request*//*, @PathVariable String operation*//*) {
-        return new Response(mainService.getMin(request.getFilepath()).toString());
-    }
-
-    @GetMapping(value = {"/get_median_value"}, produces = {"application/json", "application/xml"})
-    public Response getMedian(@RequestBody Request request*//*, @PathVariable String operation*//*) {
-        return new Response(mainService.getMedian(request.getFilepath()).toString());
-    }
-
-    @GetMapping(value = {"/get_avg_value"}, produces = {"application/json", "application/xml"})
-    public Response getAvg(@RequestBody Request request*//*, @PathVariable String operation*//*) {
-        return new Response(mainService.getAvg(request.getFilepath()).toString());
-    }*/
-
 }
