@@ -1,22 +1,16 @@
-# relax
-
----
-
 ### Все найденные числа/последовательности из тестового файла 10m.txt
 
-+ **max_value** = 49999978
-+ **min_value** = -49999996
-+ **median_value** = 25216
-+ **avg_value** = 7364.418442641844
-+ **asc_sequence** = -48190694, -47725447, -43038241, -20190291, -17190728, -6172572, 8475960, 25205909, 48332507, 48676185
-+ **desc_sequence** = 47689379, 42381213, 30043880, 12102356, -4774057, -5157723, -11217378, -23005285, -23016933, -39209115, -49148762
+max_value = 49999978
+min_value = -49999996
+median_value = 25216
+avg_value = 7364.418442641844
+asc_sequence = -48190694, -47725447, -43038241, -20190291, -17190728, -6172572, 8475960, 25205909, 48332507, 48676185
+desc_sequence = 47689379, 42381213, 30043880, 12102356, -4774057, -5157723, -11217378, -23005285, -23016933, -39209115, -49148762
 
----
 
 ### Примеры REST-запросов и ответов.
 
 ## Пример №1
-```json
 GET http://localhost:8080/relex/get_max_value
 request:
 {
@@ -26,10 +20,8 @@ response:
 {
     "max_value": 23453242
 }
-```
 
 ## Пример №2
-```json
 GET http://localhost:8080/relex/get_avg_value
 request:
 {
@@ -39,10 +31,8 @@ response:
 {
     "avg_value": 819062.9189189189
 }
-```
 
 ## Пример №3
-```json
 GET http://localhost:8080/relex/
 request:
 {
@@ -60,11 +50,9 @@ response:
       ]
     ]
 }
-```
 
 
 ## Пример №4
-```json
 GET http://localhost:8080/relex/get_desc_sequence
 request:
 {
@@ -89,14 +77,10 @@ response:
       ]
     ]
 }
-```
-
----
 
 ### Примеры REST-запросов и ответов для файла 10m.txt
 
 ## Пример №5
-```json
 GET http://localhost:8080/relex/
 request:
 {
@@ -107,10 +91,8 @@ response:
 {
     "max_value": 49999978
 }
-```
 
 ## Пример №6
-```json
 GET http://localhost:8080/relex/
 request:
 {
@@ -121,10 +103,8 @@ response:
 {
     "min_value": -49999996
 }
-```
 
 ## Пример №7
-```json
 GET http://localhost:8080/relex/
 request:
 {
@@ -135,10 +115,8 @@ response:
 {
     "median_value": 25216
 }
-```
 
 ## Пример №8
-```json
 GET http://localhost:8080/relex/
 request:
 {
@@ -149,10 +127,8 @@ response:
 {
     "avg_value": 7364.418442641844
 }
-```
 
 ## Пример №9
-```json
 GET http://localhost:8080/relex/get_asc_sequence
 request:
 {
@@ -175,10 +151,8 @@ response:
       ]
     ]
 }
-```
 
 ## Пример №10
-```json
 GET http://localhost:8080/relex/get_desc_sequence
 request:
 {
@@ -202,4 +176,3 @@ response:
       ]
     ]
 }
-```
