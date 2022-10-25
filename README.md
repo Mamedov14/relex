@@ -13,7 +13,7 @@
 
 ---
 
-### Примеры REST-запросов и ответов
+### Примеры REST-запросов и ответов.
 
 ## Пример №1
 ```json
@@ -47,20 +47,6 @@ GET http://localhost:8080/relex/
 request:
 {
     "filepath": "F:\\company\\internship_relex\\myFile.txt",
-    "operation": "get_median_value"
-}
-response:
-{
-    "median_value": 67
-}
-```
-
-## Пример №4
-```json
-GET http://localhost:8080/relex/
-request:
-{
-    "filepath": "F:\\company\\internship_relex\\myFile.txt",
     "operation": "get_asc_sequence"
 }
 response:
@@ -77,7 +63,7 @@ response:
 ```
 
 
-## Пример №5
+## Пример №4
 ```json
 GET http://localhost:8080/relex/get_desc_sequence
 request:
@@ -105,6 +91,24 @@ response:
 }
 ```
 
+---
+
+### Примеры REST-запросов и ответов для файла 10m.txt
+
+## Пример №5
+```json
+GET http://localhost:8080/relex/
+request:
+{
+    "filepath": "F:\\company\\internship_relex\\10m.txt",
+    "operation": "get_max_value"
+}
+response:
+{
+    "max_value": 49999978
+}
+```
+
 ## Пример №6
 ```json
 GET http://localhost:8080/relex/
@@ -120,6 +124,34 @@ response:
 ```
 
 ## Пример №7
+```json
+GET http://localhost:8080/relex/
+request:
+{
+    "filepath": "F:\\company\\internship_relex\\10m.txt",
+    "operation": "get_median_value"
+}
+response:
+{
+    "median_value": 25216
+}
+```
+
+## Пример №8
+```json
+GET http://localhost:8080/relex/
+request:
+{
+    "filepath": "F:\\company\\internship_relex\\10m.txt",
+    "operation": "get_avg_value"
+}
+response:
+{
+    "avg_value": 7364.418442641844
+}
+```
+
+## Пример №9
 ```json
 GET http://localhost:8080/relex/get_asc_sequence
 request:
@@ -145,3 +177,29 @@ response:
 }
 ```
 
+## Пример №10
+```json
+GET http://localhost:8080/relex/get_desc_sequence
+request:
+{
+    "filepath": "F:\\company\\internship_relex\\10m.txt"
+}
+response:
+{
+    "desc_sequence": [
+      [
+        47689379,
+        42381213,
+        30043880,
+        12102356,
+        -4774057,
+        -5157723,
+        -11217378,
+        -23005285,
+        -23016933,
+        -39209115,
+        -49148762
+      ]
+    ]
+}
+```
