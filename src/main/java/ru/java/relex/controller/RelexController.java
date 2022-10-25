@@ -1,7 +1,12 @@
 package ru.java.relex.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +24,11 @@ import java.util.Map;
 public class RelexController {
     private final UtilsService utilsService;
 
+    @Operation(summary = "Get max value", responses = {
+            @ApiResponse(description = "Get max success", responseCode = "200",
+                    content = @Content(schema = @Schema(implementation = Map.class))),
+            @ApiResponse(description = "Not Found Max", responseCode = "409")
+    })
     @GetMapping(value = {"/get_max_value"}, produces = {"application/json", "application/xml"})
     public ResponseEntity<Map<String, Long>> getMax(@RequestBody Request request) {
         return ResponseEntity.ok(Map.of("max_value", utilsService.getMax(request)));
