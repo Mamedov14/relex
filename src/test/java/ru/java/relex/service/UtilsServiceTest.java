@@ -33,24 +33,43 @@ class UtilsServiceTest {
         when(relexRepository
                 .getContent("F:\\company\\internship_relex\\10m.txt"))
                 .thenReturn(list);
-        Long result = (long) utilsService.getResult(new Request("F:\\company\\internship_relex\\10m.txt", "get_max_value"));
+        Long result = utilsService.getMax(new Request("F:\\company\\internship_relex\\10m.txt", "get_max_value"));
         assertEquals(result, 4234L);
     }
 
     @Test
     void getMin() {
+        List<Long> list = List.of(1L, 3L, 4L, 2L, 34L, 23L, 4L, 234L, 23L, 4L, 324L, 23L, 4234L, 234L, 24L);
+        when(relexRepository
+                .getContent("F:\\company\\internship_relex\\10m.txt"))
+                .thenReturn(list);
+        Long result = utilsService.getMin(new Request("F:\\company\\internship_relex\\10m.txt", "get_max_value"));
+        assertEquals(result, 1L);
     }
 
     @Test
     void getMedian() {
+        List<Long> list = List.of(1L, 3L, 4L, 2L, 34L, 23L, 4L, 234L, 23L, 4L, 324L, 23L, 4234L, 234L, 24L);
+        when(relexRepository
+                .getContent("F:\\company\\internship_relex\\10m.txt"))
+                .thenReturn(list);
+        Long result = utilsService.getMedian(new Request("F:\\company\\internship_relex\\10m.txt", "get_max_value"));
+        assertEquals(result, 23);
     }
 
     @Test
     void getAvg() {
+        List<Long> list = List.of(1L, 3L, 4L, 2L, 34L, 23L, 4L, 234L, 23L, 4L, 324L, 23L, 4234L, 234L, 24L);
+        when(relexRepository
+                .getContent("F:\\company\\internship_relex\\10m.txt"))
+                .thenReturn(list);
+        Double result = utilsService.getAvg(new Request("F:\\company\\internship_relex\\10m.txt", "get_max_value"));
+        assertEquals(result, 344.73333333333335);
     }
 
     @Test
     void getAsc() {
+
     }
 
     @Test
